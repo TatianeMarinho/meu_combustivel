@@ -29,6 +29,7 @@ class _HomeState extends State<Home> {
         _textoResultado =
             "Número inválido. Digite números maiores que 0 e utilizando (.)";
       });
+      FocusScope.of(context).unfocus(); //fecha o teclado
     } else {
       /*
       Fórmula: Se o preço do álcool dividido pelo preço da gasolina for
@@ -50,7 +51,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Alcool ou Gasolina?"),
+        title: const Text("Alcool ou Gasolina"),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
